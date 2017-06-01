@@ -1,0 +1,23 @@
+#background {
+  min-height: 100%;
+  background: #b7deed;
+  background: -moz-linear-gradient(-45deg, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+  background: -webkit-linear-gradient(-45deg, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+  background: linear-gradient(135deg, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=1 ); }
+
+.container {
+  margin: 1em;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1em; }
+  .container form {
+    padding: 8px 15px; }
+
+.mdi {
+  width: auto;
+  height: auto; }
+  .mdi:before {
+    vertical-align: middle; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,26 @@
+{
+  "name": "IndexedDB",
+  "authors": [
+    "oscarortiz <oscarortiz@quantion.es>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "angular-resource": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "angular-route": "^1.6.4",
+    "mdi": "^1.9.33"
+  }
+}

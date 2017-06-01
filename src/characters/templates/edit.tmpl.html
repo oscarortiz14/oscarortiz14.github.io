@@ -1,0 +1,35 @@
+<md-dialog flex>
+    <md-toolbar></md-toolbar>
+
+    <md-dialog-content>
+        <div class="md-dialog-content">
+            <md-input-container class="md-icon-float md-block">
+                <label>Nombre</label>
+                <md-icon class="mdi mdi-account"></md-icon>
+                <input ng-model="obj.name" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-icon-float md-block">
+                <label>Poder</label>
+                <md-icon class="mdi mdi-sword-cross"></md-icon>
+                <input ng-model="obj.power" type="number">
+            </md-input-container>
+
+            <md-input-container class="md-icon-float md-block">
+                <label>Imagen</label>
+                <md-icon class="mdi mdi-image"></md-icon>
+                <input ng-model="obj.img" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-icon-float md-block">
+                <label>Color</label>
+                <md-icon class="mdi mdi-palette"></md-icon>
+                <input ng-model="obj.color" type="color">
+            </md-input-container>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+        <md-button class="md-raised md-primary" ng-click="add(obj)">Guardar</md-button>
+    </md-dialog-actions>
+</md-dialog>

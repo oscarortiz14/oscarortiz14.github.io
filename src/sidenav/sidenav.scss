@@ -1,0 +1,19 @@
+md-sidenav{
+    div{
+        padding: 16px 8px;
+        cursor: pointer;
+
+        &:hover:not(.selected){
+            background: lightgray;
+        }
+
+        span{
+            margin-left: 12px;
+        }
+    }
+
+    .selected{
+        background: gray;
+        font-weight: bold;
+    }
+}

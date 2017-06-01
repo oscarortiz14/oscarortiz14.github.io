@@ -1,0 +1,35 @@
+<md-dialog id="dex-details" flex>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>#{{::pk.num}} {{::pk.species}}</h2>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <div class="md-dialog-content">
+            <div layout="row" layout-align="center center">
+                <div class="img-container layout-column">
+                    <!--<img ng-src="http://www.smogon.com/dex/media/sprites/xy/{{::pk.species|lowercase}}.gif"/>-->
+                    <div layout="row" layout-align="center">
+                        <span ng-repeat="type in ::pk.types" class="{{::type}} type-badge">{{::type}}</span>
+                    </div>
+                </div>
+
+                <div class="layout-column layout-align-space-around-center">
+
+                    <div layout="column">
+                        <label>Habilidades</label>
+                        <a href ng-click='go(ab)' ng-repeat="(n,ab) in pk.abilities">{{::ab}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div ng-repeat="(key,value) in ::pk.baseStats" layout="row" class="layout-align-start-center">
+                    <p style="width: 100px; margin: 4px 0;">{{::key|uppercase}}: {{::value}}</p>
+                    <md-progress-linear md-mode="determinate" value="{{::(100 * value / 255)}}"></md-progress-linear>
+                </div>
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

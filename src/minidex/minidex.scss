@@ -1,0 +1,119 @@
+#dex{
+    .pk{
+        margin: 2px;
+        border: 1px solid;
+        min-width: 250px;
+        cursor: pointer;
+
+        span, .md-icon-button{
+            padding: 5px 2px;
+            margin: 2px;
+        }
+
+        .number{
+            font-weight: bold;
+        }
+
+        .name{
+
+        }
+
+        .md-icon-button{
+            height: auto;
+            width: auto;
+
+        }
+    }
+
+    .md-raised{
+        min-width: 36px;
+    }
+
+    .captured{
+        background-color: mediumseagreen;
+    }
+}
+
+#dex-details{
+    .img-container{
+        display:flex;
+        height:152px;
+        width:152px;
+        
+        img{
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            margin: auto;
+        }
+    }
+}
+
+#dex,#dex-details{
+    .type-badge{
+        font-size: small;
+        border-radius: 1em;
+        border: 1px solid black;
+        color: white;
+        text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+        padding: 1px 5px;
+        width: 55px;
+        text-align: center;
+    }
+
+    .Grass{
+        background-color: green
+    }
+    .Flying{
+        background-color: lightblue
+    }
+    .Ghost{
+        background-color: darkslateblue
+    }
+    .Fire{
+        background-color: orangered
+    }
+    .Dark{
+        background-color: black
+    }
+    .Water{
+        background-color: lightseagreen
+    }
+    .Fairy{
+        background-color: pink
+    }
+    .Normal{
+        background-color: lightgray
+    }
+    .Bug{
+        background-color: greenyellow
+    }
+    .Poison{
+        background-color: darkorchid
+    }
+    .Electric{
+        background-color: yellow
+    }
+    .Psychic{
+        background-color: magenta
+    }
+    .Rock{
+        background-color: saddlebrown
+    }
+    .Steel{
+        background-color:gray
+    }
+    .Fighting{
+        background-color: indianred
+    }
+    .Ice{
+        background-color: cyan
+    }
+    .Ground{
+        background-color: tan
+    }
+    .Dragon{
+        background-color: slateblue
+    }
+}

@@ -1,0 +1,31 @@
+<div id="listaChar">
+
+    <md-content flex class="container">
+        <md-button class="md-fab md-mini" ng-click="add()">
+            <md-icon class="mdi mdi-plus"></md-icon>
+        </md-button>
+
+        <md-list>
+            <md-list-item class="md-2-line" ng-repeat="weapon in weaponList" ng-click="details(weapon, $event)">
+                <img ng-src="{{weapon.img}}" class="md-avatar" alt="{{weapon.img}}" />
+                <div class="md-list-item-text">
+                    <h3>{{weapon.name}} <md-icon class="mdi mdi-star" ng-repeat="i in getStars(weapon.rare) track by $index"></md-icon></h3>
+                    <p>{{weapon.power}}</p>
+                </div>
+
+                <div layout="row">
+                    <md-button class="md-fab md-mini" ng-click="add(weapon)">
+                        <md-icon class="mdi mdi-pencil"></md-icon>
+                        <md-tooltip>Editar</md-tooltip>
+                    </md-button>
+                    
+                    <md-button class="md-fab md-mini" ng-click="delete(weapon)">
+                        <md-icon class="mdi mdi-delete"></md-icon>
+                        <md-tooltip>Eliminar</md-tooltip>
+                    </md-button>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+
+</div>

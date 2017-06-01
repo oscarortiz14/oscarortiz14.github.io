@@ -1,0 +1,6 @@
+http://dex.pokemonshowdown.com/
+
+["num", "species", "types", "genderRatio", "baseStats",
+ "abilities", "heightm", "weightkg", "color", "evos", "eggGroups", "tier", "id",
+ "prevo", "evoLevel", "otherFormes", "baseSpecies", "forme", "formeLetter", "requiredItem", 
+"gender", "evoMove", "baseForme", "otherForms", "isNonstandard", "unreleasedHidden", "maxHP"]
