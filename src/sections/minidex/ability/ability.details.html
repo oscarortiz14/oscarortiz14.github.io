@@ -1,0 +1,28 @@
+<div id="dex">
+
+    <md-content flex class="container">
+        <md-progress-linear md-mode="indeterminate" ng-if="adding"></md-progress-linear>
+
+        <md-button class="md-icon-button" ui-sref="app.minidex.ability.list">
+            <md-icon class="mdi mdi-arrow-left"></md-icon>
+        </md-button>
+
+        <h2 style="text-align: center">{{data.name}}</h2>
+
+        <h3>{{data.shortDesc}}</h3>
+        <h3>{{data.desc}}</h3>
+        
+        <div layout="row" layout-wrap>
+            <div class="layout-row layout-align-start-center pk" ng-class="{'captured':pk.captured}" flex
+                 ng-repeat="pk in listaPk track by $index">
+
+                <div layout="row" class="layout-row layout-align-start-center" ui-sref="app.minidex.main.details({id:'{{pk.id}}'})" flex>
+                    <span class="number">{{pk.num}}</span>
+                    <span class="name" flex>{{pk.species}}</span>
+                    <span ng-repeat="type in pk.types" class="{{type}} type-badge">{{type}}</span>
+                </div>
+            </div>
+        </div>
+    </md-content>
+
+</div>

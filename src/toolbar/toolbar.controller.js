@@ -18,11 +18,8 @@
 
         $scope.navList = {
             "app.home": "Inicio",
-            "app.characters": "Personajes",
-            "app.weapons": "Armas",
-            "app.items": "Objetos",
-            "app.minidex.main": "Dex",
-            "app.minidex.ability": "Dex"
+            "app.minidex.main.list": "Dex",
+            "app.minidex.ability.list": "Dex"
         };
     }
 })();

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACI,cAAG;EACC,OAAO,EAAE,QAAQ;EACjB,MAAM,EAAE,OAAO;EAEf,mCAAsB;IAClB,UAAU,EAAE,SAAS;EAGzB,mBAAI;IACA,WAAW,EAAE,IAAI;AAIzB,oBAAS;EACL,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,IAAI",
-"sources": ["sidenav.scss"],
-"names": [],
-"file": "sidenav.css"
-}

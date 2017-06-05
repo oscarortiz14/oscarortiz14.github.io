@@ -13,9 +13,6 @@
                 'ngRoute',
                 
                 'app.home',
-                'app.characters',
-                'app.items',
-                'app.weapons',
                 'app.minidex'
             ]);
 })();

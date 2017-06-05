@@ -1,0 +1,13 @@
+<div id="ability-list">
+
+    <md-content flex class="container">
+        <md-progress-linear md-mode="indeterminate" ng-if="adding"></md-progress-linear>
+        
+        <div layout='row' layout-wrap>
+            <h3 ui-sref="app.minidex.ability.details({id:'{{h.name}}'})"
+                ng-repeat="h in abilityList"
+                class='element'>{{h.name}}</h3>
+        </div>
+    </md-content>
+
+</div>
