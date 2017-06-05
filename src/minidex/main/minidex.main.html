@@ -17,7 +17,7 @@
             <div class="layout-row layout-align-start-center pk" ng-class="{'captured':pk.captured}" flex
                  ng-repeat="pk in listaPk| limitTo: limit: page * limit track by $index">
 
-                <md-button class="md-icon-button" ng-click="toggle(pk)">
+                <md-button class="md-icon-button" ng-click="toggle(pk)" aria-label="pk">
                     <md-icon class="mdi mdi-pokeball"></md-icon>
                 </md-button>
                 <div layout="row" class="layout-row layout-align-start-center" ng-click="details(pk, $event)" flex>

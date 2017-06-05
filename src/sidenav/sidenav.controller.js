@@ -33,7 +33,7 @@
             {
                 text: 'Dex',
                 icon: 'pokeball',
-                sref: 'app.minidex.complete'
+                sref: 'app.minidex.main'
             }
         ];
 

@@ -30,6 +30,9 @@
                 dexStore.createIndex('byType', 'types', {unique: false, multiEntry: true});
                 dexStore.createIndex('byEggGroup', 'eggGroups', {unique: false, multiEntry: true});
                 dexStore.createIndex('byTier', 'tier', {unique: false});
+
+                var dexStore = active.createObjectStore("dex_ability", {keyPath: 'num'});
+                dexStore.createIndex('byName', 'name', {unique: false});
             };
 
             request.onsuccess = function (e) {

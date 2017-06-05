@@ -53,10 +53,6 @@
 
                 $scope.adding = false;
             });
-
-            DBService.get("dex", "venusaurmega").then(function (data) {
-                console.log(data)
-            });
         }
 
         DBService.open().then(function () {
@@ -73,7 +69,7 @@
                         $state.go('app.minidex.ability', {id: id});
                     };
                 },
-                templateUrl: 'src/minidex/templates/details.tmpl.html',
+                templateUrl: 'src/minidex/main/templates/details.tmpl.html',
                 parent: angular.element(document.body),
                 targetEvent: ev,
                 clickOutsideToClose: true

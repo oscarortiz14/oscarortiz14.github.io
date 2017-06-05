@@ -4,7 +4,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta charset="UTF-8" />
-        <title>IndexedDB: Local Database with HTML5</title>
+        <title>Ejemplo con IndexedDB</title>
 
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-aria/angular-aria.js"></script>
@@ -28,10 +28,15 @@
         <script src="src/items/items.controller.js"></script>
         <script src="src/weapons/weapons.module.js"></script>
         <script src="src/weapons/weapons.controller.js"></script>
+        
         <script src="src/sidenav/sidenav.controller.js"></script>
         <script src="src/toolbar/toolbar.controller.js"></script>
+        
         <script src="src/minidex/minidex.module.js"></script>
-        <script src="src/minidex/minidex.controller.js"></script>
+        <script src="src/minidex/main/minidex.main.module.js"></script>
+        <script src="src/minidex/main/minidex.main.controller.js"></script>
+        <script src="src/minidex/ability/minidex.ability.module.js"></script>
+        <script src="src/minidex/ability/minidex.ability.controller.js"></script>
         
         <script src="src/database.js"></script>
         <script src="src/JsonService.js"></script>
@@ -45,6 +50,8 @@
         <link href="src/sidenav/sidenav.css" rel="stylesheet">
         <link href="src/toolbar/toolbar.css" rel="stylesheet">
         <link href="src/minidex/minidex.css" rel="stylesheet">
+        
+        <link rel="manifest" href="manifest.json">
     </head>
 
     <body>
