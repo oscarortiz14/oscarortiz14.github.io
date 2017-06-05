@@ -6,7 +6,11 @@
             .module('app.home')
             .controller('HomeCtrl', HomeCtrl);
 
-    function HomeCtrl() {
+    function HomeCtrl($scope, DBService) {
 
+        $scope.clearDatabase = function () {
+            DBService.deleteDatabase();
+            location.reload(true);
+        };
     }
 })();

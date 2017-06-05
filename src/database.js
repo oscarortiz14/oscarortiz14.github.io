@@ -225,6 +225,10 @@
 
             return deferred.promise;
         };
+
+        service.deleteDatabase = function () {
+            indexedDB.deleteDatabase(DATABASE_NAME);
+        };
     }
 
 })();
