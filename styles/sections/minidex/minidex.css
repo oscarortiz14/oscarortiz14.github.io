@@ -1,19 +1,26 @@
-#dex .pk {
-  margin: 2px;
+pk-template {
+  margin: 2px auto;
   border: 1px solid;
   min-width: 250px;
   cursor: pointer; }
-  #dex .pk span, #dex .pk .md-icon-button {
+  pk-template > * {
+    height: 100%; }
+  pk-template span, pk-template .md-icon-button {
     padding: 5px 2px;
     margin: 2px; }
-  #dex .pk .number {
+  pk-template .number {
     font-weight: bold; }
-  #dex .pk .md-icon-button {
-    height: auto;
-    width: auto; }
-#dex .md-raised {
+  pk-template .md-icon-button {
+    height: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 30px !important; }
+
+.md-raised {
   min-width: 36px; }
-#dex .captured {
+
+.captured {
   background-color: mediumseagreen; }
 
 #dex-details .img-container {
@@ -27,7 +34,7 @@
     height: auto;
     margin: auto; }
 
-#dex .type-badge, #dex-details .type-badge {
+.type-badge {
   font-size: small;
   border-radius: 1em;
   border: 1px solid black;
@@ -36,46 +43,64 @@
   padding: 1px 5px;
   width: 55px;
   text-align: center; }
-#dex .Grass, #dex-details .Grass {
+
+.Grass {
   background-color: green; }
-#dex .Flying, #dex-details .Flying {
+
+.Flying {
   background-color: lightblue; }
-#dex .Ghost, #dex-details .Ghost {
+
+.Ghost {
   background-color: darkslateblue; }
-#dex .Fire, #dex-details .Fire {
+
+.Fire {
   background-color: orangered; }
-#dex .Dark, #dex-details .Dark {
+
+.Dark {
   background-color: black; }
-#dex .Water, #dex-details .Water {
+
+.Water {
   background-color: lightseagreen; }
-#dex .Fairy, #dex-details .Fairy {
+
+.Fairy {
   background-color: pink; }
-#dex .Normal, #dex-details .Normal {
+
+.Normal {
   background-color: lightgray; }
-#dex .Bug, #dex-details .Bug {
+
+.Bug {
   background-color: greenyellow; }
-#dex .Poison, #dex-details .Poison {
+
+.Poison {
   background-color: darkorchid; }
-#dex .Electric, #dex-details .Electric {
+
+.Electric {
   background-color: yellow; }
-#dex .Psychic, #dex-details .Psychic {
+
+.Psychic {
   background-color: magenta; }
-#dex .Rock, #dex-details .Rock {
+
+.Rock {
   background-color: saddlebrown; }
-#dex .Steel, #dex-details .Steel {
+
+.Steel {
   background-color: gray; }
-#dex .Fighting, #dex-details .Fighting {
+
+.Fighting {
   background-color: indianred; }
-#dex .Ice, #dex-details .Ice {
+
+.Ice {
   background-color: cyan; }
-#dex .Ground, #dex-details .Ground {
+
+.Ground {
   background-color: tan; }
-#dex .Dragon, #dex-details .Dragon {
+
+.Dragon {
   background-color: slateblue; }
 
 #ability-list .element {
   width: 190px;
-  margin: 5px auto;
+  margin: 5px auto 5px 8px;
   padding: 5px 3px;
   cursor: pointer; }
 #ability-list .element:hover {
