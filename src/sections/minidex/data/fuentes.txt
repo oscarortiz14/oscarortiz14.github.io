@@ -4,3 +4,12 @@ http://dex.pokemonshowdown.com/
  "abilities", "heightm", "weightkg", "color", "evos", "eggGroups", "tier", "id",
  "prevo", "evoLevel", "otherFormes", "baseSpecies", "forme", "formeLetter", "requiredItem", 
 "gender", "evoMove", "baseForme", "otherForms", "isNonstandard", "unreleasedHidden", "maxHP"]
+
+["num", "accuracy", "basePower", "category", "desc", "shortDesc", "id", "name", "pp", "priority", "flags",
+ "isZ", "critRatio", "secondary", "target", "type", "contestType", "$$hashKey", "drain", "zMovePower", "isViable",
+ "boosts", "zMoveEffect", "zMoveBoost", "volatileStatus", "effect", "multihit", "sideCondition", "stallingMove",
+ "selfSwitch", "ignoreImmunity", "self", "recoil", "onBasePowerPriority", "noSketch", "ignoreDefensive", "ignoreEvasion",
+ "forceSwitch", "nonGhostTarget", "status", "isFutureMove", "damage", "terrain", "selfdestruct", "pseudoWeather", 
+"noFaint", "breaksProtect", "secondaries", "ohko", "useTargetOffensive", "willCrit", "weather", "heal", "hasCustomRecoil",
+ "pressureTarget", "isUnreleased", "ignoreAbility", "defensiveCategory", "thawsTarget", "noPPBoosts", "sleepUsable",
+ "stealsBoosts", "struggleRecoil", "onTryHit", "multiaccuracy"]

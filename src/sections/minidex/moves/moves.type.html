@@ -1,0 +1,16 @@
+<div id="moves-list">
+
+    <md-content flex class="container">
+        <md-button class="md-icon-button" ui-sref="app.minidex.moves.list">
+            <md-icon class="mdi mdi-arrow-left"></md-icon>
+        </md-button>
+        
+        <div layout='row' layout-wrap>
+            <h3 ui-sref="app.minidex.moves.details({id:'{{::mv.id}}'})"
+                ng-repeat="mv in ::movesList"
+                class='element {{::mv.type}} move-badge'>{{::mv.name}} <span ng-if='mv.isZ'>Z</span></h3>
+        </div>
+        
+    </md-content>
+
+</div>

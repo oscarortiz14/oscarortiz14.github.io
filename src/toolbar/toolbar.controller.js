@@ -19,7 +19,8 @@
         $scope.navList = {
             "app.home": "Inicio",
             "app.minidex.main.list": "Dex",
-            "app.minidex.ability.list": "Dex"
+            "app.minidex.ability.list": "Dex",
+            "app.minidex.moves.list": "Lista de movimientos"
         };
     }
 })();

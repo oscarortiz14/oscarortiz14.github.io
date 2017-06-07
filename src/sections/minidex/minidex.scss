@@ -69,6 +69,15 @@ pk-template{
     text-align: center;
 }
 
+.move-badge{
+    font-size: initial;
+    border-radius: 1em;
+    border: 1px solid black;
+    color: white;
+    text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    text-align: center;
+}
+
 .Grass{
     background-color: green
 }
@@ -124,7 +133,7 @@ pk-template{
     background-color: slateblue
 }
 
-#ability-list{
+#ability-list, #moves-list{
     .element{
         width: 190px;
         margin: 5px auto 5px 8px;

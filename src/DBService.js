@@ -16,12 +16,13 @@
 
         service.open = function () {
             var deferred = $q.defer();
-            var request = indexedDB.open(DATABASE_NAME, 1);
+            var request = indexedDB.open(DATABASE_NAME, 2);
 
             request.onupgradeneeded = function (e) {
                 var active = request.result;
                 console.log('on upgrade needed', active);
 
+                /* ------------------------ */
                 var dexStore = !active.objectStoreNames.contains('dex')
                         ? active.createObjectStore("dex", {keyPath: 'id'})
                         : e.target.transaction.objectStore('dex');
@@ -35,12 +36,21 @@
                 if (!dexStore.indexNames.contains('byAbility'))
                     dexStore.createIndex('byAbility', 'abilities_', {unique: false, multiEntry: true});
 
+                /* ------------------------ */
                 var abStore = !active.objectStoreNames.contains('dex_ability')
                         ? active.createObjectStore("dex_ability", {keyPath: 'num'})
                         : e.target.transaction.objectStore('dex_ability');
 
                 if (!abStore.indexNames.contains('byName'))
                     abStore.createIndex('byName', 'name', {unique: false});
+
+                /* ------------------------ */
+                var movStore = !active.objectStoreNames.contains('dex_moves')
+                        ? active.createObjectStore("dex_moves", {keyPath: 'id'})
+                        : e.target.transaction.objectStore('dex_moves');
+
+                if (!movStore.indexNames.contains('byType'))
+                    movStore.createIndex('byType', 'type', {unique: false});
             };
 
             request.onsuccess = function (e) {

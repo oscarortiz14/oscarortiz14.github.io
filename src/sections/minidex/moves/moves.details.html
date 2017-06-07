@@ -1,0 +1,19 @@
+<div id="dex">
+
+    <md-content flex class="container">
+        <md-progress-linear md-mode="indeterminate" ng-if="adding"></md-progress-linear>
+
+        <md-button class="md-icon-button" ui-sref="app.minidex.moves.list">
+            <md-icon class="mdi mdi-arrow-left"></md-icon>
+        </md-button>
+
+        <h2 style="text-align: center">{{::data.name}}</h2>
+
+        <!--        <h3>{{::data.shortDesc}}</h3>
+                <h3>{{::data.desc}}</h3>-->
+
+        <h3 ng-repeat="(k,v) in data">{{k}}: {{v}}</h3>
+
+    </md-content>
+
+</div>

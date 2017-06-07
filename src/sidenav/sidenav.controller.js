@@ -24,6 +24,11 @@
                 text: 'Habilidades',
                 icon: 'pokeball',
                 sref: 'app.minidex.ability.list'
+            },
+            {
+                text: 'Movimientos',
+                icon: 'alert-decagram',
+                sref: 'app.minidex.moves.list'
             }
         ];
 

@@ -79,6 +79,28 @@
                     });
                     break;
                 }
+                
+                case 'dex_moves':
+                {
+                    DBService.clear('dex_moves').then(function () {
+                        JsonService.get('src/sections/minidex/data/moves.json', function (data) {
+                            var d = data.obj;
+                            $scope.j3 = Object.keys(d).length;
+                            $scope.j3tam = Object.keys(d).length;
+
+                            $.each(d, function (key, val) {
+                                if (val.num > 0) {
+                                    DBService.add(val, "dex_moves").then(function () {
+                                        --$scope.j3;
+                                    });
+                                } else {
+                                    --$scope.j3;
+                                }
+                            });
+                        });
+                    });
+                    break;
+                }
 
                 default:
                     console.log('Nombre de tabla incorrecto');
