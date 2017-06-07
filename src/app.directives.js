@@ -13,7 +13,7 @@
             scope: {
                 pk: '='
             },
-            template: '<div class="layout-row layout-align-start-center flex" ng-class="{\'captured\':pk.captured}">' +
+            template: '<div class="layout-row layout-align-start-center flex" ng-class="{\'seen\':pk.seen,\'captured\':pk.captured}" ng-right-click="toggle2(pk)">' +
                     '       <md-button class="md-icon-button" ng-click="toggle(pk)" aria-label="pk">' +
                     '           <md-icon class="mdi mdi-pokeball"></md-icon>' +
                     '       </md-button>' +
@@ -26,6 +26,14 @@
             link: function (scope, element, attrs) {
                 scope.toggle = function (char) {
                     char.captured = !char.captured;
+
+                    DBService.add(char, "dex").then(function (data) {
+                        char = data;
+                    });
+                };
+                
+                scope.toggle2 = function (char) {
+                    char.seen = !char.seen;
 
                     DBService.add(char, "dex").then(function (data) {
                         char = data;

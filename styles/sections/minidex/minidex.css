@@ -21,7 +21,10 @@ pk-template {
   min-width: 36px; }
 
 .captured {
-  background-color: mediumseagreen; }
+  background-color: mediumseagreen !important; }
+
+.seen {
+  background-color: yellow; }
 
 #dex-details .img-container {
   display: flex;

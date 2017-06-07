@@ -24,14 +24,6 @@
             });
         });
 
-        $scope.toggle = function (char, ev) {
-            char.captured = !char.captured;
-
-            DBService.add(char, "dex").then(function (data) {
-                char = data;
-            });
-        };
-
         $scope.setPage = function (num) {
             $scope.page = num;
         };

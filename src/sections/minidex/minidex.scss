@@ -35,7 +35,11 @@ pk-template{
 }
 
 .captured{
-    background-color: mediumseagreen;
+    background-color: mediumseagreen !important;
+}
+
+.seen{
+    background-color: yellow;
 }
 
 #dex-details{
