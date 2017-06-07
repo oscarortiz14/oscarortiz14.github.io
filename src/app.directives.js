@@ -3,7 +3,8 @@
     'use strict';
     angular
             .module('app')
-            .directive('pkTemplate', PkTemplate);
+            .directive('pkTemplate', PkTemplate)
+            .directive('ngRightClick', ngRightClick);
 
 
     function PkTemplate(DBService) {
@@ -23,8 +24,6 @@
                     '       </div>' +
                     ' </div>',
             link: function (scope, element, attrs) {
-                console.log(scope.pk);
-
                 scope.toggle = function (char) {
                     char.captured = !char.captured;
 
@@ -37,4 +36,15 @@
         return directive;
     }
 
+    function ngRightClick($parse) { //Ejemplo: <div ng-right-click="i()">...
+        return function (scope, element, attrs) {
+            var fn = $parse(attrs.ngRightClick);
+            element.bind('contextmenu', function (event) {
+                scope.$apply(function () {
+                    event.preventDefault();
+                    fn(scope, {$event: event});
+                });
+            });
+        };
+    }
 })();

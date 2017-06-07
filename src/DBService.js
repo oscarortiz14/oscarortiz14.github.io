@@ -22,14 +22,25 @@
                 var active = request.result;
                 console.log('on upgrade needed', active);
 
-                var dexStore = active.createObjectStore("dex", {keyPath: 'id'});
-                dexStore.createIndex('byNum', 'num', {unique: false});
-                dexStore.createIndex('byType', 'types', {unique: false, multiEntry: true});
-                dexStore.createIndex('byEggGroup', 'eggGroups', {unique: false, multiEntry: true});
-                dexStore.createIndex('byAbility', 'abilities_', {unique: false, multiEntry: true});
+                var dexStore = !active.objectStoreNames.contains('dex')
+                        ? active.createObjectStore("dex", {keyPath: 'id'})
+                        : e.target.transaction.objectStore('dex');
 
-                var abStore = active.createObjectStore("dex_ability", {keyPath: 'num'});
-                abStore.createIndex('byName', 'name', {unique: false});
+                if (!dexStore.indexNames.contains('byNum'))
+                    dexStore.createIndex('byNum', 'num', {unique: false});
+                if (!dexStore.indexNames.contains('byType'))
+                    dexStore.createIndex('byType', 'types', {unique: false, multiEntry: true});
+                if (!dexStore.indexNames.contains('byEggGroup'))
+                    dexStore.createIndex('byEggGroup', 'eggGroups', {unique: false, multiEntry: true});
+                if (!dexStore.indexNames.contains('byAbility'))
+                    dexStore.createIndex('byAbility', 'abilities_', {unique: false, multiEntry: true});
+
+                var abStore = !active.objectStoreNames.contains('dex_ability')
+                        ? active.createObjectStore("dex_ability", {keyPath: 'num'})
+                        : e.target.transaction.objectStore('dex_ability');
+
+                if (!abStore.indexNames.contains('byName'))
+                    abStore.createIndex('byName', 'name', {unique: false});
             };
 
             request.onsuccess = function (e) {
@@ -83,6 +94,8 @@
                     var result = request.result;
                     if (result !== undefined) {
                         deferred.resolve(result);
+                    } else {
+                        deferred.reject("No encontrado");
                     }
                 };
 
@@ -108,8 +121,10 @@
 
                 request.onsuccess = function (e) {
                     var result = request.result;
-                    if (result !== undefined) {
+                    if (result.length) {
                         deferred.resolve(result);
+                    } else {
+                        deferred.reject("No encontrado");
                     }
                 };
 
@@ -137,8 +152,10 @@
 
                 request.onsuccess = function (e) {
                     var result = request.result;
-                    if (result !== undefined) {
+                    if (result.length) {
                         deferred.resolve(result);
+                    } else {
+                        deferred.reject("No encontrado");
                     }
                 };
 
@@ -225,6 +242,29 @@
 
         service.deleteDatabase = function () {
             indexedDB.deleteDatabase(DATABASE_NAME);
+        };
+
+        service.getDbInfo = function () {
+            var db = service.db;
+            return{
+                name: db.name,
+                objectStoreNames: toArray(db.objectStoreNames).map(function (storeName) {
+                    var store = db.transaction([storeName], 'readonly').objectStore(storeName);
+                    return {
+                        name: store.name,
+                        indexNames: toArray(store.indexNames)
+                    };
+                })
+            };
+
+            function toArray(obj) {
+                var array = [];
+                // iterate backwards ensuring that length is an UInt32
+                for (var i = obj.length >>> 0; i--; ) {
+                    array[i] = obj[i];
+                }
+                return array;
+            }
         };
     }
 

@@ -1,11 +1,6 @@
 <div id="dex">
 
     <md-content flex class="container">
-        <md-button class="md-fab md-mini" ng-click="clear()">
-            <md-icon class="mdi mdi-delete"></md-icon>
-        </md-button>
-
-        <md-progress-linear md-mode="indeterminate" ng-if="adding"></md-progress-linear>
 
         <div layout="row" layout-align="center center" layout-wrap>
             <md-button ng-repeat="pag in nPag track by $index" ng-click="setPage($index)" class="md-raised" ng-class="{'md-accent':page === $index,'md-primary':page !== $index}">

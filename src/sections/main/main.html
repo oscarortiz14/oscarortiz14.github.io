@@ -1,9 +1,28 @@
-<div id="home">
+<div id="main">
 
     <md-content flex class="container">
-        <md-button class="md-fab md-mini" ng-click="clearDatabase()">
+        <md-button class="md-fab md-mini" ng-click="getInfo()" aria-label="info">
+            <md-icon class="mdi mdi-information-outline"></md-icon>
+        </md-button>
+        <md-button class="md-fab md-mini" ng-click="clearDatabase()" aria-label="clear">
             <md-icon class="mdi mdi-delete"></md-icon>
         </md-button>
+
+        <div>
+            <h2>Nombre de BD: {{dbInfo.name}}</h2>
+            <div ng-repeat="os in dbInfo.objectStoreNames">
+                <h4>Store: {{os.name}}
+                    <md-button class="md-raised md-warn" ng-click="LoadData(os.name)">Recargar datos</md-button>
+                </h4>
+                <div ng-repeat="ind in os.indexNames">
+                    - {{ind}}
+                </div>
+            </div>
+        </div>
+
+        <md-progress-linear md-mode="determinate" value="{{100 - (100 * j1 / j1tam)}}" ng-if="j1"></md-progress-linear>
+
+        <md-progress-linear md-mode="determinate" value="{{100 - (100 * j2 / j2tam)}}" ng-if="j2"></md-progress-linear>
     </md-content>
 
 </div>
