@@ -8,19 +8,19 @@
 
     function HomeCtrl($scope, DBService, $mdDialog, JsonService) {
 
-        $scope.clearDatabase = function () {
-            var confirm = $mdDialog.confirm()
-                    .title('¿Eliminar base de datos?')
-                    .ok('Si')
-                    .cancel('No')
-                    .clickOutsideToClose(true);
-            $mdDialog.show(confirm).then(function () {
-                DBService.deleteDatabase();
-//                location.reload(true);
-            }, function () {
-
-            });
-        };
+//        $scope.clearDatabase = function () {
+//            var confirm = $mdDialog.confirm()
+//                    .title('¿Eliminar base de datos?')
+//                    .ok('Si')
+//                    .cancel('No')
+//                    .clickOutsideToClose(true);
+//            $mdDialog.show(confirm).then(function () {
+//                DBService.deleteDatabase();
+////                location.reload(true);
+//            }, function () {
+//
+//            });
+//        };
 
         $scope.getInfo = function () {
             DBService.open().then(function () {

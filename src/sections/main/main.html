@@ -4,9 +4,7 @@
         <md-button class="md-fab md-mini" ng-click="getInfo()" aria-label="info">
             <md-icon class="mdi mdi-information-outline"></md-icon>
         </md-button>
-        <md-button class="md-fab md-mini" ng-click="clearDatabase()" aria-label="clear">
-            <md-icon class="mdi mdi-delete"></md-icon>
-        </md-button>
+        <md-button class="md-raised md-accent" onclick="window.location.reload(true)">Recargar datos</md-button>
 
         <div>
             <h2>Nombre de BD: {{dbInfo.name}}</h2>
